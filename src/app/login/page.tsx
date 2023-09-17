@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 import toast from "react-hot-toast";
 
-export default function loginPage() {
+export default function LoginPage() {
   const router=useRouter()
    const [buttonDisable, setButtonDisable] = React.useState(false);
    const [loading,setLoading]=React.useState(false);
