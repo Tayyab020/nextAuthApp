@@ -38,26 +38,34 @@ export default function loginPage() {
       }
     }
     return (
-      <div className="flex flex-col justify-center items-center min-h-screen py-2" >
-        <h1>{loading? "processing":"login"}</h1>
+      <div  className="flex flex-col items-center justify-center min-h-screen ">
+       <div  className="flex bg-cover flex-col items-center  justify-center  py-2 border h-[800px] w-[800px] bg-transparent rounded-2xl"
+     >
+       <h1 className=" font-bold text-4xl p-6">{loading? "processing":"login"}</h1>
         <hr/>
-        <label htmlFor="email">email</label>
-        <input className=" p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        <label htmlFor="email" className="py-1 text-3xl" >email</label>
+        <input   className="p-2 hover:bg-slate-200 focus:border-red-600 focus:border-red rounded-lg border focus:outline-none  text-black"
+          placeholder="Email"
         type="text"
         id="email"
         value={user.email}
         onChange={(e)=>setuser({...user,email:e.target.value})}
         />
         <hr/>
-        <label htmlFor="password">password</label>
-        <input className=" p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        <label htmlFor="password" className="py-1 text-3xl">password</label>
+        <input 
+          className="p-2 hover:bg-slate-200 focus:border-red-600 focus:border-red rounded-lg border focus:outline-none  text-black"
+          placeholder="Password"
         type="password"
         id="password"
         value={user.password}
         onChange={(e)=>setuser({...user,password:e.target.value})}
         />
-        <button className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600" onClick={onlogin}>login</button>
-        <Link href="/signup">signUp</Link>
+        <button 
+            className="p-2 border bg-blue-600 hover:bg-blue-600 border-gray-300 rounded-lg my-4 focus:outline-none focus:border-gray-600"
+         onClick={onlogin}>login</button>
+        <Link className="hover:text-blue-600" href="/signup">signUp</Link>
+        </div> 
       </div>
     )
   }

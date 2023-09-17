@@ -67,22 +67,24 @@ const Signup = () => {
         </label>
         <input
           className="p-2 hover:bg-slate-200 focus:border-red-600 focus:border-red rounded-lg border focus:outline-none  text-black"
+          placeholder="Email"
           id="email"
           type="email"
           value={user.email}
           onChange={(e) => setUser({ ...user, email: e.target.value })}
-          placeholder="Email"
+          
         />
         <label htmlFor="password" className="py-1 text-3xl">
           Password
         </label>
         <input
           className="p-2 hover:bg-slate-200 focus:border-red-600 focus:border-red rounded-lg border focus:outline-none  text-black"
+          placeholder="Password"
           id="password"
           type="password"
           value={user.password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
-          placeholder="Password"
+         
         />
         <button
           onClick={onSignup}
